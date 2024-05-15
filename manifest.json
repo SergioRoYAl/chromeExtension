@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "vvv_button",
+    "version": "0.3",
+    "description": "¡Una extensión increíble para hacerte la vida más fácil!",
+    "permissions": [
+      "activeTab",
+      "alarms",
+      "scripting"
+    ],
+    "background": {
+        "service_worker": "background.js"
+      },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    }
+  }
+  
